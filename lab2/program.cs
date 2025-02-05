@@ -1,4 +1,3 @@
-
 using System;
 using System.IO;
 using System.Text.Json;
@@ -39,7 +38,7 @@ class Program
         Console.WriteLine($"Час виконання: {st.ElapsedMilliseconds} мс");
 
         // 5. Асинхронна обробка (System.Threading.Tasks)
-        await ProcessTask();
+        await Prk();
 
         // 6. Робота з HTTP запитами (System.Net)
         using (var client = new WebClient())
@@ -57,7 +56,7 @@ class Program
      
     }
 
-    static async Task ProcessTask()
+    static async Task Prk()
     {
         Console.WriteLine("Запуск асинхронного процесу...");
         await Task.Delay(2000);
